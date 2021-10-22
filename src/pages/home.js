@@ -13,7 +13,7 @@ import { Link, Element } from "react-scroll";
 
 function HomePage() {
   const [offsetY, setOffsetY] = useState(0);
-  const [tooly, setTooly] = useState(false);
+  const [tooly, setTooly] = useState(true);
   const [moverd, setMoverd] = useState(false);
   const [ccr, setCcr] = useState(false);
 
