@@ -6,6 +6,7 @@ import skills from "../Component-skills.svg";
 import toolyPrj from "../tooly.png";
 import moverdPrj from "../moverd.png";
 import ccrPrj from "../ccr.png";
+import arrow from '../arrow.png'
 import toolyLogo from "../tooly-logo.png";
 import moverdLogo from "../moverd-logo.png";
 import ccrLogo from "../ccr-logo.png";
@@ -13,7 +14,7 @@ import { Link, Element } from "react-scroll";
 
 function HomePage() {
   const [offsetY, setOffsetY] = useState(0);
-  const [tooly, setTooly] = useState(true);
+  const [tooly, setTooly] = useState(false);
   const [moverd, setMoverd] = useState(false);
   const [ccr, setCcr] = useState(false);
 
@@ -59,7 +60,7 @@ function HomePage() {
             <h4>MY STACK</h4>
           </Fade>
           <Fade left>
-            <h2>My technologies</h2>
+            <h2>my technologies</h2>
           </Fade>
         </div>
         <div style={{ transform: `translateY(${offsetY * 0.35}px)` }}>
@@ -73,61 +74,90 @@ function HomePage() {
           <div className="projects-title">
             <Fade bottom>
               <h3>SOME</h3>
-              <h1>Selected projects</h1>
+              <h1>selected projects</h1>
               {/*    <img src={projectImage} alt={projectImage} /> */}
             </Fade>
           </div>
           <div className="project-list">
-            <a onClick={toggleTooly} className="project-link">
+            <a
+              onClick={toggleTooly}
+              onMouseEnter={() => {
+                setTooly(true);
+                setMoverd(false);
+                setCcr(false);
+              }}
+              className="project-link"
+            >
               <img src={toolyLogo} alt={toolyLogo} />
             </a>
-            <a onClick={toggleMoverd} className="project-link">
+            <a
+              onClick={toggleMoverd}
+              onMouseEnter={() => {
+                setTooly(false);
+                setMoverd(true);
+                setCcr(false);
+              }}
+              className="project-link"
+            >
               <img src={moverdLogo} alt={moverdLogo} />
             </a>
-            <a onClick={toggleCcr} className="project-link">
+            <a
+              onClick={toggleCcr}
+              onMouseEnter={() => {
+                setTooly(false);
+                setMoverd(false);
+                setCcr(true);
+              }}
+              className="project-link"
+            >
               <img src={ccrLogo} alt={ccrLogo} />
             </a>
           </div>
-          <div style={{ transform: `translateY(${offsetY * 0.05}px)` }}>
-          {tooly && (
-            <Fade bottom>
-              <div className="project-container">
-                <img src={toolyPrj} alt={toolyPrj} />
-                <h3>
-                  Tooly is a tool sharing platform. The idea is to rent the
-                  tools we got at home creating community, sharing resources,
-                  evading the consumerism and reusing items.
-                </h3>
-              </div>
-            </Fade>
-          )}
-          {moverd && (
-            <Fade bottom>
-              <div className="project-container">
-                <img src={moverdPrj} alt={moverdPrj} />
-                <h3>
-                  Tooly is a tool sharing platform. The idea is to rent the
-                  tools we got at home creating community, sharing resources,
-                  evading the consumerism and reusing items.
-                </h3>
-              </div>
-            </Fade>
-          )}
-          <div>
-            {ccr && (
-              <Fade>
+          {(tooly || moverd || ccr) && <div className="arrow-container">
+            <img className={(moverd || ccr ? 'arrow-hide' : '')} src={arrow} alt={arrow}/>
+            <img className={(tooly || ccr ? 'arrow-hide' : '')} src={arrow} alt={arrow}/>
+            <img className={(moverd || tooly ? 'arrow-hide' : '')} src={arrow} alt={arrow}/>
+          </div>}
+          {(tooly || moverd || ccr) && <div className="project-container-father">
+            {tooly && (
+        
                 <div className="project-container">
-                  <img src={ccrPrj} alt={ccrPrj} />
+                  <img src={toolyPrj} alt={toolyPrj} />
                   <h3>
                     Tooly is a tool sharing platform. The idea is to rent the
                     tools we got at home creating community, sharing resources,
                     evading the consumerism and reusing items.
                   </h3>
                 </div>
-              </Fade>
+     
             )}
+            {moverd && (
+      
+                <div className="project-container">
+                  <img src={moverdPrj} alt={moverdPrj} />
+                  <h3>
+                    Tooly is a tool sharing platform. The idea is to rent the
+                    tools we got at home creating community, sharing resources,
+                    evading the consumerism and reusing items.
+                  </h3>
+                </div>
+
+            )}
+            <div>
+              {ccr && (
+         
+                  <div className="project-container">
+                    <img src={ccrPrj} alt={ccrPrj} />
+                    <h3>
+                      Tooly is a tool sharing platform. The idea is to rent the
+                      tools we got at home creating community, sharing
+                      resources, evading the consumerism and reusing items.
+                    </h3>
+                  </div>
+          
+              )}
             </div>
-          </div>
+          </div>}
         </div>
       </Element>
     </div>

@@ -66,7 +66,15 @@ function Navbar() {
   return (
     <NavbarContainer shadow={shadow}>
       <div className="navbar">
+        <Link
+            className="navbar-link"
+            to="home-page"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
         <h3>Jordi Davesa</h3>
+        </Link>
         <div>
           <Link
             className="navbar-link"
