@@ -67,7 +67,7 @@ function Navbar() {
     <NavbarContainer shadow={shadow}>
       <div className="navbar">
         <Link
-            className="navbar-link"
+            className="navbar-link-name"
             to="home-page"
             spy={true}
             smooth={true}

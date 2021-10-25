@@ -1,4 +1,4 @@
-import topImage from "../Illustrator3.png";
+import topImage from "../Illustration.png";
 import projectImage from "../Illustration4.png";
 import { useState, useEffect } from "react";
 import Fade from "react-reveal/Fade";
