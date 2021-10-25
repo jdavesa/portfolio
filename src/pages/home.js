@@ -79,7 +79,7 @@ function HomePage() {
           <div className="projects-title">
             <Fade bottom>
               <h3>SOME</h3>
-              <h1>selected projects</h1>
+              <h1  className="punto-2">selected projects</h1>
               {/*    <img src={projectImage} alt={projectImage} /> */}
             </Fade>
           </div>
