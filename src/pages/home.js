@@ -6,11 +6,16 @@ import skills from "../Component-skills.svg";
 import toolyPrj from "../tooly.png";
 import moverdPrj from "../moverd.png";
 import ccrPrj from "../ccr.png";
-import arrow from '../arrow.png'
+import arrow from "../arrow.png";
 import toolyLogo from "../tooly-logo.png";
 import moverdLogo from "../moverd-logo.png";
 import ccrLogo from "../ccr-logo.png";
 import { Link, Element } from "react-scroll";
+import ContactForm from "../components/contactForm";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faHome} from '@fortawesome/free-solid-svg-icons';
+import {faLinkedin} from '@fortawesome/free-brands-svg-icons';
+import {faGithub} from '@fortawesome/free-brands-svg-icons';
 
 function HomePage() {
   const [offsetY, setOffsetY] = useState(0);
@@ -113,14 +118,28 @@ function HomePage() {
               <img src={ccrLogo} alt={ccrLogo} />
             </a>
           </div>
-          {(tooly || moverd || ccr) && <div className="arrow-container">
-            <img className={(moverd || ccr ? 'arrow-hide' : '')} src={arrow} alt={arrow}/>
-            <img className={(tooly || ccr ? 'arrow-hide' : '')} src={arrow} alt={arrow}/>
-            <img className={(moverd || tooly ? 'arrow-hide' : '')} src={arrow} alt={arrow}/>
-          </div>}
-          {(tooly || moverd || ccr) && <div className="project-container-father">
-            {tooly && (
-        
+          {(tooly || moverd || ccr) && (
+            <div className="arrow-container">
+              <img
+                className={moverd || ccr ? "arrow-hide" : ""}
+                src={arrow}
+                alt={arrow}
+              />
+              <img
+                className={tooly || ccr ? "arrow-hide" : ""}
+                src={arrow}
+                alt={arrow}
+              />
+              <img
+                className={moverd || tooly ? "arrow-hide" : ""}
+                src={arrow}
+                alt={arrow}
+              />
+            </div>
+          )}
+          {(tooly || moverd || ccr) && (
+            <div className="project-container-father">
+              {tooly && (
                 <div className="project-container">
                   <img src={toolyPrj} alt={toolyPrj} />
                   <h3>
@@ -129,10 +148,8 @@ function HomePage() {
                     evading the consumerism and reusing items.
                   </h3>
                 </div>
-     
-            )}
-            {moverd && (
-      
+              )}
+              {moverd && (
                 <div className="project-container">
                   <img src={moverdPrj} alt={moverdPrj} />
                   <h3>
@@ -141,11 +158,9 @@ function HomePage() {
                     evading the consumerism and reusing items.
                   </h3>
                 </div>
-
-            )}
-            <div>
-              {ccr && (
-         
+              )}
+              <div>
+                {ccr && (
                   <div className="project-container">
                     <img src={ccrPrj} alt={ccrPrj} />
                     <h3>
@@ -154,12 +169,22 @@ function HomePage() {
                       resources, evading the consumerism and reusing items.
                     </h3>
                   </div>
-          
-              )}
+                )}
+              </div>
             </div>
-          </div>}
+          )}
         </div>
       </Element>
+      <Element>
+        <div className="contact">
+          <ContactForm />
+        </div>
+      </Element>
+      <footer>
+        <a href="https://www.linkedin.com/in/jordi-davesa-casanova/"><FontAwesomeIcon icon={faLinkedin} className="social-link"/></a>
+        <a href="https://github.com/jdavesa"><FontAwesomeIcon icon={faGithub} className="social-link"/></a>
+        <p className="rights">©2021 Made by Jordi Davesa</p>
+      </footer>
     </div>
   );
 }

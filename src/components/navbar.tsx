@@ -87,7 +87,7 @@ function Navbar() {
           </Link>
           <Link
             className="navbar-link"
-            to="projects"
+            to="contact"
             spy={true}
             smooth={true}
             duration={500}

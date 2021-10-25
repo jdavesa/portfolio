@@ -41,7 +41,7 @@
   margin: 0;
   padding-top: 200px;
 
-  height: 5000px;
+  height: 3600px;
   /* background: rgb(255,255,255);
   background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 30%, #0077ff 100%); */
 
@@ -213,4 +213,100 @@
 
 .project-container h3{
   color: rgb(36, 36, 36);
+}
+
+.contact{
+  background-color:noe;
+  margin: 0;
+  padding-top: 200px;
+  height:80vh;
+}
+
+.contact-form{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 400px;
+  width: 300px;
+  background-color: white;
+}
+
+.contact-form h1{
+  font-size: 2.3rem;
+  /* color:#fca350; */
+  color:rgb(36, 36, 36);
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.contact-form label{
+  padding: 5px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color:#003ECB
+}
+
+
+.contact-form input{
+  border:none;
+  border-bottom: 1px solid rgb(36, 36, 36);
+  font-size: 1rem;
+  margin-bottom: 30px;
+  outline: none;
+  padding: 5px;
+}
+
+.contact-form input::placeholder{
+  color:rgb(182, 182, 182);
+}
+
+.contact-form textarea{
+  border:none;
+  border-bottom: 1px solid rgb(36, 36, 36);
+  font-size: 1rem;
+  font-family: poppins !important;
+  margin-bottom: 30px;
+  outline: none;
+  height:100px;
+  padding: 5px;
+}
+
+.contact-form textarea::placeholder{
+  color:rgb(182, 182, 182);
+}
+
+
+.contact-form button{
+  background-color: #003ECB;
+  border: none;
+  width: 100px;
+  font-size: 1rem;
+  color: white;
+  font-weight: 800;
+  padding: 15px;
+  border-radius:100vh;
+  cursor: pointer;
+  margin: auto;
+
+}
+
+footer{
+  padding: auto;
+  height: 80px;
+  text-align: center;
+  background-color: rgb(36, 36, 36);
+}
+
+.social-link{
+  color: white;
+  font-size: 1.5rem;
+  margin: 10px 50px;
+}
+
+.rights{
+  color: white;
+  font-size: 0.7rem;
+  margin: 0
+ 
 }
