@@ -89,7 +89,7 @@ function HomePage() {
               </div>
               <div
                 style={
-                  offsetY > 2400 && offsetY < 2900
+                  offsetY > 2400 && offsetY < 3000
                     ? {
                         color: "rgb(36,36,36)",
                         borderLeft: "1px solid rgb(36,36,36)",
@@ -109,7 +109,7 @@ function HomePage() {
               </div>
               <div
                 style={
-                  offsetY > 2900
+                  offsetY > 3000
                     ? {
                         color: "rgb(36,36,36)",
                         borderLeft: "1px solid rgb(36,36,36)",
@@ -131,13 +131,13 @@ function HomePage() {
           </div>
           <div className="project-images">
             <div>
-              <img src={toolyPrj} alt={toolyPrj} />
+              <a href="https://prj-toolsharing-front.herokuapp.com/"><img src={toolyPrj} alt={toolyPrj} /></a>
             </div>
             <div>
-              <img src={moverdPrj} alt={moverdPrj} />
+            <a href="https://moverd.herokuapp.com/"><img src={moverdPrj} alt={moverdPrj} /></a>
             </div>
             <div>
-              <img src={ccrPrj} alt={ccrPrj} />
+            <a href="https://jdavesa.github.io/COLORADO-COWS-REVENGE/#"><img src={ccrPrj} alt={ccrPrj} /></a>
             </div>
           </div>
         </Element>

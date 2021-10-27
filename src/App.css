@@ -403,9 +403,15 @@
   background-color: none;
 }
 
-.project-images div img{
+.project-images div a img{
   width: 100%;
   margin-top: 200px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.project-images div a img:hover{
+  transform: scale(1.05)
 }
 
 
