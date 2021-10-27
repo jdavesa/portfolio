@@ -21,7 +21,7 @@ const NavbarContainer = styled.div<INv>`
   z-index: 2;
   width: 100vw;
   height: 50px;
-  background-color: rgba(255, 255, 255);
+  background-color: rgb(246, 247, 242);
   animation: ${(props) =>
       props.shadow === "default"
         ? null
@@ -35,13 +35,14 @@ const toShadow = keyframes`
         box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.041);
     }
     to{
-        box-shadow: 1px 5px 20px rgba(0, 0, 0, 0.08);;
+        box-shadow: 1px 5px 20px rgba(0, 0, 0, 0.041);
+        border-bottom: 1px solid rgb(36, 36, 36);
     }
 `;
 
 const toNoShadow = keyframes`
     from{
-        box-shadow: 1px 5px 20px rgba(0, 0, 0, 0.08);; 
+        box-shadow: 1px 5px 20px rgba(0, 0, 0, 0.041);; 
     }
     to{
         box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.041);;
