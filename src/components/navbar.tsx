@@ -1,15 +1,6 @@
 import { useState } from "react";
 import styled, { keyframes } from "styled-components";
-import Scroll from "react-scroll";
-import {
-  Link,
-  Button,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from "react-scroll";
+import {Link} from "react-scroll";
 
 interface INv {
   shadow: string;

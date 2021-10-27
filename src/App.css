@@ -6,7 +6,7 @@
 }
 
 .line-between-sections{
-  width: 80%;
+  width: 75%;
   margin: auto;
   border-top: 1px solid rgb(36, 36, 36);
 
@@ -55,7 +55,7 @@
 .navbar-link{
   cursor: pointer;
   font-size:1rem;
-  font-weight: 500;
+  font-weight: 300;
   transition: all 0.3s;
   margin-left:30px;
 }
@@ -66,7 +66,7 @@
 
 .home-page{
   margin: 0;
-  padding-top: 200px;
+  padding-top: 120px;
 
   height: 3600px;
   /* background: rgb(255,255,255);
@@ -79,7 +79,7 @@
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  background-color: rgb(233, 235, 227);
+  background-color: rgb(233, 235, 227); 
   border-radius: 10px;
   padding: 30px 60px;
   margin: auto;
@@ -93,13 +93,52 @@
   align-items: flex-start;
 }
 
+.title{
+  display: inline-block !important;
+}
+
+.title p{
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.title form{
+  margin-top: 50px;
+}
+
+.title form button{
+  font-family: poppins;
+  font-size: 1rem;
+  font-weight: 300 !important;
+  cursor: pointer;
+  margin: 0;
+  transition: all 0.3s;
+  background-color:none;
+  background: none;
+  border-radius: 100vh;
+  padding: 15px 30px;
+  border: 1px solid rgb(36, 36, 36);
+  margin-bottom: 30px;
+}
+
+.title form button:hover{
+  border: 1px solid #003ECB;
+  color: #003ECB;
+}
+
 .top-container div img{
   width: 400px;
+  margin-top: 70px;
   height: auto,!important;;
 }
 
 .top-container div h1{
-  font-size: 3.5rem;
+  font-size: 3.6rem;
+  font-weight: 200;
+  line-height: 5rem;
+  margin: 0;
 }
 
 @media (max-width: 400px){
@@ -322,7 +361,8 @@
 
 
 .projects-container-scroll{
-  width: 100%;
+  width: 75%;
+  margin: auto;
   background-color:rgb(246, 247, 242);
   display: flex;
   justify-content: space-between;
@@ -333,9 +373,10 @@
 }
 
 .projects-list-sticky{
+  color: rgb(36, 36, 36);
   background-color:rgb(246, 247, 242);
   padding-top: 100px;
-  width: 800px;
+  width: 1000px;
   height: 700px;
   position: sticky;
   top: 0;
@@ -343,25 +384,28 @@
 }
 
 .projects-list-sticky h1{
-  color: rgb(36, 36, 36);
   font-weight: 300;
   font-size: 2rem;
 }
 .projects-list-sticky p{
-  color: rgb(36, 36, 36);
   font-weight: 300;
   font-size: .9rem;
 }
 
 .project-images{
-  background-color:rgb(246, 247, 242);
+  background-color: rgb(246, 247, 242) ;
   padding-top: 100px;
   padding-left: 50px;
+  padding-bottom: 150px;
+}
+
+.project-images div{
+  background-color: none;
 }
 
 .project-images div img{
-  width: 70%;
-  margin: 100px 0;
+  width: 100%;
+  margin-top: 200px;
 }
 
 
@@ -382,7 +426,7 @@
   background-color:rgb(246, 247, 242);
   margin: 0;
   padding-top: 200px;
-  height:80vh;
+  height:67vh;
 }
 
 .contact-form{
@@ -452,7 +496,6 @@
   padding: 15px;
   border-radius:100vh;
   cursor: pointer;
-  margin: auto;
   transition: all 0.3s;
 
 }
@@ -465,17 +508,17 @@ footer{
   padding: auto;
   height: 80px;
   text-align: center;
-  background-color: rgb(36, 36, 36);
+  background-color: none;
 }
 
 .social-link{
-  color: white;
+  color: rgb(36, 36, 36);
   font-size: 1.5rem;
   margin: 10px 50px;
 }
 
 .rights{
-  color: white;
+  color: rgb(36, 36, 36);
   font-size: 0.7rem;
   margin: 0
  

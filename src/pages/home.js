@@ -1,30 +1,19 @@
 import topImage from "../Illustration.png";
-import projectImage from "../Illustration4.png";
 import { useState, useEffect } from "react";
-import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 import skills from "../Component-skills.svg";
 import toolyPrj from "../tooly.png";
 import moverdPrj from "../moverd.png";
 import ccrPrj from "../ccr.png";
-import arrow from "../arrow.png";
-import toolyLogo from "../tooly-logo.png";
-import moverdLogo from "../moverd-logo.png";
-import ccrLogo from "../ccr-logo.png";
-import { Link, Element } from "react-scroll";
+import { Element } from "react-scroll";
 import ContactForm from "../components/contactForm";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-
-const Stikcy = styled.div``;
+import cv from '../jordi-davesa-cv.pdf'
 
 function HomePage() {
   const [offsetY, setOffsetY] = useState(0);
-  const [tooly, setTooly] = useState(false);
-  const [moverd, setMoverd] = useState(false);
-  const [ccr, setCcr] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const handleScroll = () => setOffsetY(window.pageYOffset);
@@ -40,29 +29,18 @@ function HomePage() {
     return () => window.addEventListener("resize", handleSize);
   }, []);
 
-  const toggleTooly = () => {
-    setTooly(true);
-    setMoverd(false);
-    setCcr(false);
-  };
-
-  const toggleMoverd = () => {
-    setTooly(false);
-    setMoverd(true);
-    setCcr(false);
-  };
-  const toggleCcr = () => {
-    setTooly(false);
-    setMoverd(false);
-    setCcr(true);
-  };
-
   return (
     <div className="home-page">
       <div className="top-container">
         <div style={{ transform: `translateY(${offsetY * 0.3}px)` }}>
           <Fade bottom>
-            <h1>I am a Front-end developer with a background in design.</h1>
+            <div className="title">
+              <p>ABOUT ME</p>
+              <h1>I am a Front-end developer with a background in <br/>design.</h1>
+              <form method="get" action={cv}>
+                <button type="submit">Download CV</button>
+              </form>
+            </div>
           </Fade>
           <Fade top>
             <img src={topImage} alt={topImage} />
@@ -89,42 +67,88 @@ function HomePage() {
         <Element name="projects" className="projects-container-scroll">
           <div className="projects-list-sticky">
             <div>
-              <div>
+              <div
+                style={
+                  offsetY < 2400
+                    ? {
+                        color: "rgb(36,36,36)",
+                        borderLeft: "1px solid rgb(36,36,36)",
+                        transition: "all 0.3s",
+                        paddingLeft: "20px",
+                      }
+                    : { color: "rgb(180,180,180)", transition: "all 0.3s" }
+                }
+              >
                 <h1>Tooly</h1>
                 <p>React | Node.js | MongoDB</p>
-                <p>Tooly is a tool sharing platform.
-The idea is to rent the tools we got at home creating community, sharing resources, evading the consumerism and reusing items.</p>
+                <p>
+                  Tooly is a tool sharing platform. The idea is to rent the
+                  tools we got at home creating community, sharing resources,
+                  evading the consumerism and reusing items.
+                </p>
               </div>
-              <div>
+              <div
+                style={
+                  offsetY > 2400 && offsetY < 2900
+                    ? {
+                        color: "rgb(36,36,36)",
+                        borderLeft: "1px solid rgb(36,36,36)",
+                        transition: "all 0.3s",
+                        paddingLeft: "20px",
+                      }
+                    : { color: "rgb(180,180,180)", transition: "all 0.3s" }
+                }
+              >
                 <h1>Moverd</h1>
                 <p>JavaScript | Node.js | MongoDB</p>
-                <p>Tooly is dfasdf kdfjaldsjf fjsdjhfklafja hfaksdhfjkdajfa dfjlsdjfldsajfla jfldsajfashgfkdahfa ljfaldsjflas dfasdl fjadsljfsldjfldsjf jfadslfjsdljfldsjfladsjfa  ldsfjdlsjfaljfldsf jlsdjflsdjfksdjflaj jflasdjfladsjkflaksfjal.</p>
+                <p>
+                  Moved is a real-time air quality visual map of Barcelona. It
+                  is designed to check the air quality of you area before
+                  realizing any kind of open-air sport activity
+                </p>
               </div>
-              <div>
+              <div
+                style={
+                  offsetY > 2900
+                    ? {
+                        color: "rgb(36,36,36)",
+                        borderLeft: "1px solid rgb(36,36,36)",
+                        paddingLeft: "20px",
+                        transition: "all 0.3s",
+                      }
+                    : { color: "rgb(180,180,180)", transition: "all 0.3s" }
+                }
+              >
                 <h1>CCR</h1>
                 <p>JavaScript | Canvas</p>
-                <p>Tooly is dfasdf kdfjaldsjf fjsdjhfklafja hfaksdhfjkdajfa dfjlsdjfldsajfla jfldsajfashgfkdahfa ljfaldsjflas dfasdl fjadsljfsldjfldsjf jfadslfjsdljfldsjfladsjfa  ldsfjdlsjfaljfldsf jlsdjflsdjfksdjflaj jflasdjfladsjkflaksfjal.</p>
+                <p>
+                  Colorado cows revenge is a Shoot 'em up game inspired by the
+                  stories of the cows being abducted by ufos in the '70s. In
+                  this fiction, cows have found a way to go against the ufos.
+                </p>
               </div>
             </div>
           </div>
           <div className="project-images">
-              <div>
-                <img src={toolyPrj} alt={toolyPrj} />
-              </div>
-              <div>
-                <img src={moverdPrj} alt={moverdPrj} />
-              </div>
-              <div>
-                <img src={ccrPrj} alt={ccrPrj} />
-              </div>
+            <div>
+              <img src={toolyPrj} alt={toolyPrj} />
             </div>
+            <div>
+              <img src={moverdPrj} alt={moverdPrj} />
+            </div>
+            <div>
+              <img src={ccrPrj} alt={ccrPrj} />
+            </div>
+          </div>
         </Element>
       )}
+      <hr className="line-between-sections" />
       <Element>
         <div className="contact">
           <ContactForm />
         </div>
       </Element>
+
       <footer>
         <a href="https://www.linkedin.com/in/jordi-davesa-casanova/">
           <FontAwesomeIcon icon={faLinkedin} className="social-link" />
