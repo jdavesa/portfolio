@@ -5,6 +5,13 @@
   background-color:rgb(246, 247, 242);
 }
 
+.line-between-sections{
+  width: 80%;
+  margin: auto;
+  border-top: 1px solid rgb(36, 36, 36);
+
+}
+
 .navbar{
   display: flex;
   justify-content: space-between;
@@ -135,7 +142,7 @@
 
 .skills-container h4{
   font-size: 1.2rem;
-  color:#888888;
+  color:rgb(36, 36, 36);
   margin: 0;
   font-weight: 700;
   z-index: 2;
@@ -171,7 +178,7 @@
   height: 110vh;
   padding-top: 50px;
   text-align: center;
-  background-color: rgb(148, 150, 139);
+  background-color: rgb(246, 247, 242);
 
 }
 
@@ -186,7 +193,7 @@
 
 .projects-title h3{
   font-size: 1.2rem;
-  color: white;
+  color: rgb(36, 36, 36);
   margin: 0;
   font-weight: 700;
   z-index: 2;
@@ -194,7 +201,7 @@
 }
 
 .projects-title h1{
-  color: white;
+  color: rgb(36, 36, 36);
   margin: 0;
   font-weight: 300;
   font-size: 2.3rem;
@@ -311,8 +318,68 @@
   }
 }
 
+
+
+
+.projects-container-scroll{
+  width: 100%;
+  background-color:rgb(246, 247, 242);
+  display: flex;
+  justify-content: space-between;
+}
+
+.projects-container-scroll::-webkit-scrollbar{
+  
+}
+
+.projects-list-sticky{
+  background-color:rgb(246, 247, 242);
+  padding-top: 100px;
+  width: 800px;
+  height: 700px;
+  position: sticky;
+  top: 0;
+  left: 50px;
+}
+
+.projects-list-sticky h1{
+  color: rgb(36, 36, 36);
+  font-weight: 300;
+  font-size: 2rem;
+}
+.projects-list-sticky p{
+  color: rgb(36, 36, 36);
+  font-weight: 300;
+  font-size: .9rem;
+}
+
+.project-images{
+  background-color:rgb(246, 247, 242);
+  padding-top: 100px;
+  padding-left: 50px;
+}
+
+.project-images div img{
+  width: 70%;
+  margin: 100px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .contact{
-  background-color:rgb(242, 243, 237);
+  background-color:rgb(246, 247, 242);
   margin: 0;
   padding-top: 200px;
   height:80vh;
@@ -325,7 +392,7 @@
   justify-content: flex-start;
   height: 400px;
   width: 300px;
-  background-color: rgb(242, 243, 237);
+  background-color:rgb(246, 247, 242);
 }
 
 .contact-form h1{
@@ -351,7 +418,7 @@
   margin-bottom: 30px;
   outline: none;
   padding: 5px;
-  background-color: rgb(242, 243, 237);
+  background-color:rgb(246, 247, 242);
 }
 
 .contact-form input::placeholder{
@@ -367,7 +434,7 @@
   outline: none;
   height:100px;
   padding: 5px;
-  background-color: rgb(242, 243, 237);
+  background-color:rgb(246, 247, 242);
 }
 
 .contact-form textarea::placeholder{

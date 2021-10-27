@@ -79,7 +79,7 @@ function Navbar() {
         <div>
           <Link
             className="navbar-link"
-            to="punto-2"
+            to="projects"
             spy={true}
             smooth={true}
             duration={500}
