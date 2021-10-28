@@ -16,7 +16,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center !important;
-  width: 1100px;
+  width: 75%;
   margin: auto;
 }
 
@@ -67,8 +67,9 @@
 .home-page{
   margin: 0;
   padding-top: 120px;
+  background-color: rgb(233, 235, 227); 
 
-  height: 3600px;
+  height: 2000px;
   /* background: rgb(255,255,255);
   background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 30%, #0077ff 100%); */
 
@@ -81,15 +82,15 @@
   align-items: flex-start;
   background-color: rgb(233, 235, 227); 
   border-radius: 10px;
-  padding: 30px 60px;
+  padding: 30px 0px;
   margin: auto;
-  width: 1000px;
+  width: 75%;
   margin-bottom: 200px;
 }
 
 .top-container div{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-start;
 }
 
@@ -129,9 +130,9 @@
 }
 
 .top-container div img{
-  width: 400px;
+  width: 700px;
   margin-top: 70px;
-  height: auto,!important;;
+  height: auto;
 }
 
 .top-container div h1{
