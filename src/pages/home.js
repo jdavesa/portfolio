@@ -71,7 +71,7 @@ function HomePage() {
           <div className="projects-list-sticky">
           <div className="projects-computer-title">
         <Fade right>
-            <h4>SOME</h4>
+            <h4>SELECTED</h4>
           </Fade>
           <Fade left>
             <h2>projects</h2>
@@ -163,7 +163,7 @@ function HomePage() {
         <Element name="projects" className="projects-container-mobile">
         <div className="projects-mobile-title">
         <Fade right>
-            <h4>SOME</h4>
+            <h4>SELECTED</h4>
           </Fade>
           <Fade left>
             <h2>projects</h2>
