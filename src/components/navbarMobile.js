@@ -84,7 +84,7 @@ function NavbarMobile() {
       
         <Slide right when={showMenu}>
           <div className="ham-menu">
-            <Link
+            {showMenu && <Link
               className="navbar-ham-link"
               onClick={toggleMenu}
               to="projects"
@@ -93,8 +93,8 @@ function NavbarMobile() {
               duration={500}
             >
               /projects
-            </Link>
-            <Link
+            </Link>}
+            {showMenu && <Link
               className="navbar-ham-link"
               onClick={toggleMenu}
               to="contact"
@@ -103,7 +103,7 @@ function NavbarMobile() {
               duration={500}
             >
               /contact
-            </Link>
+            </Link>}
           </div>
         </Slide>
       {/* {!showMenu && (

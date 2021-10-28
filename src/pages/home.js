@@ -10,7 +10,7 @@ import ContactForm from "../components/contactForm";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import cv from '../jordi-davesa-cv.pdf'
+import cv from "../jordi-davesa-cv.pdf";
 
 function HomePage() {
   const [offsetY, setOffsetY] = useState(0);
@@ -36,7 +36,10 @@ function HomePage() {
           <Fade bottom>
             <div className="title">
               <p>ABOUT ME</p>
-              <h1>I am a Front-end developer with a background in <br/>design.</h1>
+              <h1>
+                I am a Front-end developer with a background in <br />
+                design.
+              </h1>
               <form method="get" action={cv}>
                 <button type="submit">Download CV</button>
               </form>
@@ -62,10 +65,18 @@ function HomePage() {
           </Fade>
         </div>
       </div>
-      <hr className="line-between-sections" />
+      {/* {windowWidth > 800 && <hr className="line-between-sections" />} */}
       {windowWidth > 800 && (
         <Element name="projects" className="projects-container-scroll">
           <div className="projects-list-sticky">
+          <div className="projects-computer-title">
+        <Fade right>
+            <h4>SOME</h4>
+          </Fade>
+          <Fade left>
+            <h2>projects</h2>
+          </Fade>
+          </div>
             <div>
               <div
                 style={
@@ -76,7 +87,7 @@ function HomePage() {
                         transition: "all 0.3s",
                         paddingLeft: "20px",
                       }
-                    : { color: "rgb(180,180,180)", transition: "all 0.3s" }
+                    : { color: "rgb(200,200,200)", transition: "all 0.3s" }
                 }
               >
                 <h1>Tooly</h1>
@@ -96,7 +107,7 @@ function HomePage() {
                         transition: "all 0.3s",
                         paddingLeft: "20px",
                       }
-                    : { color: "rgb(180,180,180)", transition: "all 0.3s" }
+                    : { color: "rgb(200,200,200)", transition: "all 0.3s" }
                 }
               >
                 <h1>Moverd</h1>
@@ -116,7 +127,7 @@ function HomePage() {
                         paddingLeft: "20px",
                         transition: "all 0.3s",
                       }
-                    : { color: "rgb(180,180,180)", transition: "all 0.3s" }
+                    : { color: "rgb(200,200,200)", transition: "all 0.3s" }
                 }
               >
                 <h1>CCR</h1>
@@ -131,18 +142,80 @@ function HomePage() {
           </div>
           <div className="project-images">
             <div>
-              <a href="https://prj-toolsharing-front.herokuapp.com/"><img src={toolyPrj} alt={toolyPrj} /></a>
+              <a href="https://prj-toolsharing-front.herokuapp.com/">
+                <img src={toolyPrj} alt={toolyPrj} />
+              </a>
             </div>
             <div>
-            <a href="https://moverd.herokuapp.com/"><img src={moverdPrj} alt={moverdPrj} /></a>
+              <a href="https://moverd.herokuapp.com/">
+                <img src={moverdPrj} alt={moverdPrj} />
+              </a>
             </div>
             <div>
-            <a href="https://jdavesa.github.io/COLORADO-COWS-REVENGE/#"><img src={ccrPrj} alt={ccrPrj} /></a>
+              <a href="https://jdavesa.github.io/COLORADO-COWS-REVENGE/#">
+                <img src={ccrPrj} alt={ccrPrj} />
+              </a>
             </div>
           </div>
         </Element>
       )}
-      <hr className="line-between-sections" />
+      {windowWidth < 800 && (
+        <Element name="projects" className="projects-container-mobile">
+        <div className="projects-mobile-title">
+        <Fade right>
+            <h4>SOME</h4>
+          </Fade>
+          <Fade left>
+            <h2>projects</h2>
+          </Fade>
+          </div>
+          <div className="project-container-mobile">
+            <h1>Tooly</h1>
+            <hr className="project-line" />
+            <h4>React | Node.js | MongoDB</h4>
+            <p>
+              Tooly is a tool sharing platform. The idea is to rent the tools we
+              got at home creating community, sharing resources, evading the
+              consumerism and reusing items.
+            </p>
+            <a href="https://prj-toolsharing-front.herokuapp.com/">
+              <img src={toolyPrj} alt={toolyPrj} />
+            </a>
+          </div>
+          <div className="project-container-mobile">
+            <hr className="project-line" />
+            <h1>Moverd</h1>
+            <hr className="project-line" />
+            <h4>JavaScript | Node.js | MongoDB</h4>
+            <p>
+              Moved is a real-time air quality visual map of Barcelona. It is
+              designed to check the air quality of you area before realizing any
+              kind of open-air sport activity
+            </p>
+            <a href="https://prj-toolsharing-front.herokuapp.com/">
+              <img src={moverdPrj} alt={moverdPrj} />
+            </a>
+          </div>
+          <div className="project-container-mobile">
+            <hr className="project-line" />
+            <h1>CCR</h1>
+            <hr className="project-line" />
+            <h4>JavaScript | Canvas</h4>
+            <p>
+              Colorado cows revenge is a Shoot 'em up game inspired by the
+              stories of the cows being abducted by ufos in the '70s. In this
+              fiction, cows have found a way to go against the ufos.
+            </p>
+            <a href="https://prj-toolsharing-front.herokuapp.com/">
+              <img src={ccrPrj} alt={ccrPrj} />
+              <br/>
+              <br/>
+              <br/>
+            </a>
+            <hr className="project-line" />
+          </div>
+        </Element>
+      )}
       <Element>
         <div className="contact">
           <ContactForm />
